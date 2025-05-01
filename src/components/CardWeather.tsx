@@ -16,6 +16,7 @@ type Props = {
 function fahrenheitToCelsius(temp: number) {
   return Math.round(((temp - 32) * 5) / 9);
 }
+
 function typeIcon(conditions: string) {
   switch (conditions) {
     case "Partially cloudy":
@@ -39,11 +40,9 @@ function formatDate(date: string) {
   const dateFormat = new Date(date).toUTCString();
   const arrayDate = dateFormat.split(" ");
   return `${arrayDate[0]} ${arrayDate[1]}-${arrayDate[2]}-${arrayDate[3]}`;
-
 }
 
 function CardWeather({ date, tempmax, tempmin, conditions }: Props) {
-  
   return (
     <>
       <Box
